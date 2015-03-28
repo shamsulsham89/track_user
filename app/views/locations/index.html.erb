@@ -11,12 +11,14 @@
 	<table class="table table-hover">
 	<tr>
 		<td>Id</td>
+		<td>Address</td>
 		<td>Latitude</td>
 		<td>Longitude</td>
 	</tr>
 	<% @locations.each do |location| %>
 	 <tr>
 	 	<td><%= link_to location.id, location_path(location) %></td>
+	 	<td><%= location.address %></td>
 	 	<td><%= location.longitude %></td>
 	 	<td><%= location.latitude %></td>
 	 </tr>

@@ -1,3 +1,14 @@
+<dl class="dl-horizontal">
+  <dt><strong>Address:</strong></dt>
+  <dd><%= @location.address %></dd>
+
+  <dt><strong>Latitude:</strong></dt>
+  <dd><%= @location.latitude %></dd>
+
+  <dt><strong>Longitude:</strong></dt>
+  <dd><%= @location.longitude %></dd>
+ </dl>
+
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
 
 <h3>Nearby locations</h3>
