@@ -5,7 +5,14 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create(email: "admin@example.com", password: "password", password_confirmation: "password", user_type: 1)
+u = User.first_or_initialize(email: "admin@example.com", password: "password", password_confirmation: "password", user_type: 1)
+u.save
 
-Location.create(latitude: "51.5033630", longitude: "-0.1276250")
-Location.create(latitude: "51.5045918", longitude: "-0.1273568")
+l1 = Location.new(latitude: "28.542959", longitude: "77.200684")
+l1.save
+l2 = Location.new(latitude: "28.512935", longitude: "77.192677")
+l2.save
+l3 = Location.new(latitude: "28.505788", longitude: "77.213963")
+l3.save
+l4 = Location.new(:latitude => "28.499773", :longitude => "77.201346")
+l4.save
